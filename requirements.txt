@@ -4,5 +4,5 @@ keras==2.12.0
 numpy==1.23.5
 music21==8.1.0
 pretty_midi==0.2.10
-tensorflow-cpu
--f fluidsynth-2.2.6.tar.gz
+tensorflow-cpu==2.12.0
+-f fluidsynth-2.3.2.tar.gz
