@@ -1,8 +1,8 @@
 import streamlit as st
 
-from home_page import abstract
-from music_page import music
-from info_page import info
+from home import abstract
+from music_generation import music
+from model import generate
 
 def main():
     
@@ -10,7 +10,7 @@ def main():
     page = side_bar()
     if page == "Home":
         abstract()
-    elif page == "Model Info":
+    elif page == "Model":
         info()
     else:
         music()
@@ -21,10 +21,10 @@ def side_bar():
         st.title("Music Generation Project")
         st.header("Navigate between pages-")
 
-        page = st.radio("GoTo", ("Home", "Model Info", "Generate Music"))
+        page = st.radio("GoTo", ("Home", "Model", "Music_Generate"))
     
     return page
 
 if __name__ == "__main__":
-    st.set_page_config(page_title="Music Generator", page_icon="✨")
+    st.set_page_config(page_title="Music Generation", page_icon="✨")
     main()
