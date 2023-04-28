@@ -78,10 +78,9 @@ def music():
             with st.spinner("Generating Chopin Music"):
                 with st.empty():
                     import time
-                    st.image("https://c.tenor.com/UAser2NeFHkAAAAM/playing-piano-music.gif")
                     
                     time.sleep(4)
-                    st.stars()
+                    st.balloons()
                     if st.session_state["classical"]:
                         c = "chopin"
                         try:
@@ -105,7 +104,6 @@ def music():
                 with st.empty():
                     
                     import time
-                    st.image("https://c.tenor.com/EVKlN3Artm0AAAAC/piano-bugs-bunny.gif")
                     if st.session_state["concert"]:
                         c = "best"
                         try:
@@ -122,7 +120,7 @@ def music():
                         st.session_state["concert"] = True
                     
                     time.sleep(4)
-                    st.stars()
+                    st.balloons()
             # st.caption(c)
             st.subheader("🎉 Sample music generated from scratch: (Hybrid)")
             st.audio(output, format="wav")
