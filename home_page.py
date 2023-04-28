@@ -1,23 +1,24 @@
 import streamlit as st
 
 def abstract():
-    st.image("https://images.unsplash.com/photo-1479118013749-9f79d55a28d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")
+    st.image("https://www.taylorintime.com/wp-content/uploads/2016/11/Music-980x613.jpg")
 
     st.header("Abstract")
-    st.write("Generating music has a few notable differences from generating images and videos. \
-    First, music is an art of time, necessitating a temporal model. Second, music is usually composed \
-    of multiple instruments/tracks with their own temporal dynamics, but collectively they unfold \
-    over time interdependently. Lastly, musical notes are often grouped into chords, arpeggios, \
-    or melodies in polyphonic music, and thereby introducing a chronological ordering of notes \
-    is not naturally suitable. In recent years, there has been efforts to generate art styles like \
-    text production, video production and consequently music production. This involves starting with \
-    producing music from single notes, multi-note chorus music from concerts, etc. In this project, \
-    we focus upon producing monophonic music from a single instrument (majorly classical piano tunes) \
-    and aim to achieve a seamless synthetic generation of music with recurrent neaural network.")
-
-    st.markdown("**Keywords:** RNN, music generator, piano, deep learning")
-    st.subheader("Listen to the best sample yet: (7000 iteration)")
-    with st.columns(2)[0]:
-        st.audio(open("./music_samples/home_demo.mp3", 'rb').read(), format='audio/mp3')
+    st.write("In recent years, recurrent neural network models have defined the normative process \
+    in producing efficient and reliable results in various challenging problems such as translation, \
+    voice recognition and image captioning, thereby making huge strides in learning useful feature representations. \
+    With these latest advancements in deep learning, RNNs have garnered fame in computational creativity \
+    tasks such as even that of music generation. In this project, simple piano tunes are used for training \
+    and generating new music using deep learning.")
+    
+    st.subheader("About music data")
+    st.write("For generating music, first we have to train model using input music data. for the input data we are passing midi files. \ 
+    The data splits into two object types: Notes and Chords. Note objects contain information about the pitch, octave, and offset of the Note. \
+    ● Pitch refers to the frequency of the sound, or how high or low it is and is represented with the letters [A, B, C, D, E, F, G],  \
+    with A being the highest and G being the lowest. \
+    ● Octave refers to which set of pitches you use on a piano. \ 
+    ● Offset refers to where the note is located in the piece. \ 
+    And Chord objects are essentially a container for a set of notes that are played at the same time.")
+    
     st.markdown('---')
-    st.caption("made by Dhruvi Shah & Visalakshi Iyer @Kaizen2k22")    
+    st.caption("made by Jay Parmar")
