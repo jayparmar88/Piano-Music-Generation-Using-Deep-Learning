@@ -77,7 +77,9 @@ def music():
         if batch == "Chopin Music":
             with st.spinner("Generating Chopin Music"):
                 with st.empty():
-
+                    
+                    time.sleep(4)
+                    st.stars()
                     if st.session_state["classical"]:
                         c = "chopin"
                         try:
@@ -100,6 +102,8 @@ def music():
             with st.spinner("Generating Hybrid Music"):
                 with st.empty():
                     
+                    time.sleep(4)
+                    st.stars()
                     if st.session_state["concert"]:
                         c = "best"
                         try:
