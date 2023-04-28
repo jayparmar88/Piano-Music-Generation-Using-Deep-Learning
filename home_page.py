@@ -17,6 +17,5 @@ def abstract():
     to the frequency of the sound, or how high or low it is and is represented with the letters [A, B, C, D, E, F, G], with A being the highest \ 
     and G being the lowest. Octave refers to which set of pitches you use on a piano. Offset refers to where the note is located in the piece. \ 
     And Chord objects are essentially a container for a set of notes that are played at the same time.")
-    
-    st.markdown('---')
+
     st.caption("made by Jay Parmar")
