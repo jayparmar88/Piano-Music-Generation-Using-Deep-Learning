@@ -11,7 +11,7 @@ def abstract():
     tasks such as even that of music generation. In this project, simple piano tunes are used for training \
     and generating new music using deep learning.")
     
-    st.subheader("About music data")
+    st.subheader("Input music data")
     st.write("For generating music, first we have to train model using input music data. for the input data we are passing midi files. \ 
     The data splits into two object types: Notes and Chords. Note objects contain information about the pitch, octave, and offset of the Note. \
     ● Pitch refers to the frequency of the sound, or how high or low it is and is represented with the letters [A, B, C, D, E, F, G],  \
