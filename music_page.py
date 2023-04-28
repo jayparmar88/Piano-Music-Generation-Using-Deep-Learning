@@ -77,6 +77,8 @@ def music():
         if batch == "Chopin Music":
             with st.spinner("Generating Chopin Music"):
                 with st.empty():
+                    import time
+                    st.image("https://c.tenor.com/UAser2NeFHkAAAAM/playing-piano-music.gif")
                     
                     time.sleep(4)
                     st.stars()
@@ -102,8 +104,8 @@ def music():
             with st.spinner("Generating Hybrid Music"):
                 with st.empty():
                     
-                    time.sleep(4)
-                    st.stars()
+                    import time
+                    st.image("https://c.tenor.com/EVKlN3Artm0AAAAC/piano-bugs-bunny.gif")
                     if st.session_state["concert"]:
                         c = "best"
                         try:
@@ -118,7 +120,9 @@ def music():
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_better.mp3", 'rb').read()
                         st.session_state["concert"] = True
-                        
+                    
+                    time.sleep(4)
+                    st.stars()
             # st.caption(c)
             st.subheader("🎉 Sample music generated from scratch: (Hybrid)")
             st.audio(output, format="wav")
