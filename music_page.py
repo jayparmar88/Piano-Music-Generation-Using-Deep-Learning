@@ -114,11 +114,9 @@ def music():
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_better.mp3", 'rb').read()
                         st.session_state["concert"] = True
-                    
-                    time.sleep(3.5)
-                    st.balloons()
+                        
             # st.caption(c)
-            st.subheader("🎉 Sample music generated : (Hybrid Music)")
+            st.subheader("🎉 Sample music generated from scratch: (Hybrid)")
             st.audio(output, format="wav")
     
     st.subheader("Conclusion")
