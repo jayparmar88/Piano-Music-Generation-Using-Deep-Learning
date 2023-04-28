@@ -70,18 +70,14 @@ def music():
 
     with st.form("Batch Selection"):
         st.subheader("Choose a style of music to generate synthetic version:")
-        batch = st.radio('Style', options=("Chopin Style", "Hybrid Style"))
-        confirm = st.form_submit_button("Generate Music!")
+        batch = st.radio('Style', options=("Chopin Music", "Hybrid Music"))
+        confirm = st.form_submit_button("Generate Music")
 
     if confirm:
-        if batch == "Chopin Style":
+        if batch == "Chopin Music":
             with st.spinner("Generating Chopin Music"):
                 with st.empty():
-                    import time
-                    st.image("https://c.tenor.com/UAser2NeFHkAAAAM/playing-piano-music.gif")
-                    
-                    time.sleep(3.5)
-                    st.balloons()
+
                     if st.session_state["classical"]:
                         c = "chopin"
                         try:
@@ -97,21 +93,19 @@ def music():
                             output = open("./music_samples/mp3_versions/test_output_borodin.mp3", 'rb').read()
                         st.session_state["classical"] = True
             # st.caption(c)
-            st.subheader("✅ Sample music generated from scratch: (Chopin)")
+            st.subheader("🎉 Sample music generated : (Chopin Music)")
             st.audio(output, format="mp3")
 
-        if batch == "Hybrid Style":
+        if batch == "Hybrid Music":
             with st.spinner("Generating Hybrid Music"):
                 with st.empty():
-                    import time
-                    st.image("https://c.tenor.com/EVKlN3Artm0AAAAC/piano-bugs-bunny.gif")
                     
                     if st.session_state["concert"]:
                         c = "best"
                         try:
-                            output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_best.mid", 'rb'))
+                            output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_hybrid.mid", 'rb'))
                         except Exception as e:
-                            output = open("./music_samples/mp3_versions/test_output_best.mp3", 'rb').read()
+                            output = open("./music_samples/mp3_versions/test_output_hybrid.mp3", 'rb').read()
                         st.session_state["concert"] = False
                     else:
                         c = "better"
@@ -124,7 +118,7 @@ def music():
                     time.sleep(3.5)
                     st.balloons()
             # st.caption(c)
-            st.subheader("✅ Sample music generated from scratch: (Hybrid)")
+            st.subheader("🎉 Sample music generated : (Hybrid Music)")
             st.audio(output, format="wav")
     
     st.subheader("Conclusion")
@@ -134,5 +128,6 @@ def music():
     create more complex musical pieces. With a better computational power, a musical GAN can \
     be created for a polygraphic musical generation network that can accompany concert artists \
     alongside their performance.")
+    
     st.markdown('---')
-    st.caption("made by Dhruvi Shah & Visalakshi Iyer @Kaizen2k22")    
+    st.caption("made by Jay Parmar")
