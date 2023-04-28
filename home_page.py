@@ -13,7 +13,7 @@ def abstract():
     
     st.subheader("Input music data")
     st.write("For generating music, first we have to train model using input music data. for \
-    in producing efficient and reliable results in various challenging problems such as translation, \
+    the input data we are passing midi files. The data splits into two  object types: notes and chords. \
     voice recognition and image captioning, thereby making huge strides in learning useful feature representations. \
     With these latest advancements in deep learning, RNNs have garnered fame in computational creativity \
     tasks such as even that of music generation. In this project, simple piano tunes are used for training \
