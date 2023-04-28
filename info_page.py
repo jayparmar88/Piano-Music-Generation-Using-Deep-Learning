@@ -16,7 +16,7 @@ def info():
     Activation layer the first parameter is how many nodes the layer should have. For the Dropout layer the first parameter is the \
     fraction of input units that should be dropped during training.")
     
-    st.subheader("📻 Model Architechture")
+    st.subheader("🌉 Model Architechture")
     st.image("./src/assets/img/Model_Architechture.png", width = 600)
 
     st.markdown('---')
