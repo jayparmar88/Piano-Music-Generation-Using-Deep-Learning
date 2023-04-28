@@ -1,6 +1,6 @@
 import streamlit as st
 
-def info():
+def Generate():
 
     st.header("Model")
 
