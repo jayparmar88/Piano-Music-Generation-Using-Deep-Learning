@@ -19,7 +19,7 @@ def info():
     fraction of input units that should be dropped during training.")
     
     st.subheader("🌉 Model Architecture")
-    st.image("./src/assets/img/Model_Architecture.png")
+    st.image(".img/Model_Architecture.png")
 
     st.markdown('---')
     st.caption("made by Jay Parmar")
