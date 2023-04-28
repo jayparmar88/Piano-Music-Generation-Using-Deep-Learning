@@ -6,7 +6,7 @@ from info_page import info
 
 def main():
     
-    st.title("🎹 Music Generator using Deep Learning 🎹")
+    st.title("🎹 Music Generation using Deep Learning")
     page = side_bar()
     if page == "Home":
         abstract()
