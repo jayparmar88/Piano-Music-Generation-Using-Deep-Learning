@@ -11,7 +11,7 @@ def main():
     if page == "Home":
         abstract()
     elif page == "Model":
-        info()
+        generate()
     else:
         music()
 
