@@ -103,9 +103,9 @@ def music():
                     if st.session_state["concert"]:
                         c = "best"
                         try:
-                            output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_hybrid.mid", 'rb'))
+                            output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_best.mid", 'rb'))
                         except Exception as e:
-                            output = open("./music_samples/mp3_versions/test_output_hybrid.mp3", 'rb').read()
+                            output = open("./music_samples/mp3_versions/test_output_best.mp3", 'rb').read()
                         st.session_state["concert"] = False
                     else:
                         c = "better"
