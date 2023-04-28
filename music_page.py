@@ -1,16 +1,8 @@
 import streamlit as st
-# from convert_midi import convert_midi_to_wav
 
 def music():
-
-    # st.balloons()
-    st.header("Results and Demo")
-
-    st.subheader("Piano chord visualizations")
-
-    st.image("./src/assets/img/chords_viz.png", caption="auto generated piano-roll chords")
-
-    st.header("🎹 Audio samples to feed the generator model")
+    
+    st.header("🎵 Audio samples to train model")
 
     col1, col2 = st.columns(2)
 
@@ -20,9 +12,9 @@ def music():
         st.session_state["concert"] = True
 
     with col1:
-        midi_file1 = open("./music_samples/chopin_to_train/chpn-p11.mid", 'rb')
-        midi_file2 = open("./music_samples/chopin_to_train/chpn_op23.mid", 'rb')
-        midi_file3 = open("./music_samples/chopin_to_train/chpn_op7_1.mid", 'rb')
+        midi_file1 = open("./music_samples/chopin/chpn-p11.mid", 'rb')
+        midi_file2 = open("./music_samples/chopin/chpn_op23.mid", 'rb')
+        midi_file3 = open("./music_samples/chopin/chpn_op7_1.mid", 'rb')
         try:
             if "chopin1" not in st.session_state:
                 st.session_state["chopin1"] = convert_midi_to_wav(midi_file1)
@@ -39,11 +31,11 @@ def music():
                 st.session_state["chopin3"] = open("./music_samples/mp3_versions/chpn_op7_1.mp3", 'rb').read()
 
         st.markdown("<b> Option 1:</b> <br>Classical Music by  **Chopin**:", unsafe_allow_html=True)
-        st.caption("chopin live")
+        st.caption("chopin 1")
         st.audio(st.session_state["chopin1"], format='audio/mp3')
-        st.caption("chopin opera")
+        st.caption("chopin 2")
         st.audio(st.session_state["chopin2"], format='audio/mp3')
-        st.caption("chopin rendition")
+        st.caption("chopin 3")
         st.audio(st.session_state["chopin3"], format='audio/mp3')
 
 
@@ -67,19 +59,18 @@ def music():
                 st.session_state["hybrid3"] = open("./music_samples/mp3_versions/figaro.mp3", 'rb').read()
         
         st.markdown("<b> Option 2:</b> <br>Classical Music  **Hybrid**:", unsafe_allow_html=True)
-        st.caption("blueston last dungeon")
+        st.caption("hybrid 1")
         st.audio(st.session_state["hybrid1"], format='audio/mp3')
-        st.caption("cosmo")
+        st.caption("hybrid 2")
         st.audio(st.session_state["hybrid2"], format='audio/mp3')
-        st.caption("figaro")
+        st.caption("hybrid 3")
         st.audio(st.session_state["hybrid3"], format='audio/mp3')
     
     st.markdown('---')
 
     with st.form("Batch Selection"):
         st.subheader("Choose a style of music to generate synthetic version:")
-        batch = st.radio('Style',
-                                options=("Chopin Style", "Hybrid Style"))
+        batch = st.radio('Style', options=("Chopin Style", "Hybrid Style"))
         confirm = st.form_submit_button("Generate Music!")
 
     if confirm:
