@@ -19,7 +19,6 @@ def side_bar():
     with st.sidebar:
 
         st.title("Music Generation Project")
-        st.header("Navigate between pages-")
 
         page = st.radio("GoTo", ("Home", "Model", "Music_Generate"))
     
