@@ -4,7 +4,7 @@ def music():
     
     st.header("🎵 Audio samples to train model")
 
-    col1, col2 = st.columns(2)
+    col1, col2, col3, col4 = st.columns(4)
 
     if "classical" not in st.session_state:
         st.session_state["classical"] = True
@@ -65,6 +65,60 @@ def music():
         st.audio(st.session_state["hybrid2"], format='audio/mp3')
         st.caption("hybrid 3")
         st.audio(st.session_state["hybrid3"], format='audio/mp3')
+        
+     with col3:
+        midi_file1 = open("./music_samples/albeniz/alb_esp1.mid", 'rb')
+        midi_file2 = open("./music_samples/albeniz/alb_esp4.mid", 'rb')
+        midi_file3 = open("./music_samples/albeniz/alb_se8.mid", 'rb')
+        try:
+            if "albeniz1" not in st.session_state:
+                st.session_state["albeniz1"] = convert_midi_to_wav(midi_file1)
+            if "albeniz2" not in st.session_state:
+                st.session_state["albeniz2"] = convert_midi_to_wav(midi_file2)
+            if "albeniz3" not in st.session_state:
+                st.session_state["albeniz3"] = convert_midi_to_wav(midi_file3)
+        except Exception as e:
+            if "albeniz1" not in st.session_state:
+                st.session_state["albeniz1"] = open("./music_samples/mp3_versions/alb_esp1.mp3", 'rb').read()
+            if "albeniz2" not in st.session_state:
+                st.session_state["albeniz2"] = open("./music_samples/mp3_versions/alb_esp4.mp3", 'rb').read()
+            if "albeniz3" not in st.session_state:
+                st.session_state["albeniz3"] = open("./music_samples/mp3_versions//alb_se8.mp3", 'rb').read()
+
+        st.markdown("<b> Option 1:</b> <br>Classical Music by  **albeniz**:", unsafe_allow_html=True)
+        st.caption("albeniz 1")
+        st.audio(st.session_state["albeniz1"], format='audio/mp3')
+        st.caption("albeniz 2")
+        st.audio(st.session_state["albeniz2"], format='audio/mp3')
+        st.caption("albeniz 3")
+        st.audio(st.session_state["albeniz3"], format='audio/mp3')
+        
+     with col4:
+        midi_file1 = open("./music_samples/albeniz/alb_esp1.mid", 'rb')
+        midi_file2 = open("./music_samples/albeniz/alb_esp4.mid", 'rb')
+        midi_file3 = open("./music_samples/albeniz/alb_se8.mid", 'rb')
+        try:
+            if "albeniz1" not in st.session_state:
+                st.session_state["albeniz1"] = convert_midi_to_wav(midi_file1)
+            if "albeniz2" not in st.session_state:
+                st.session_state["albeniz2"] = convert_midi_to_wav(midi_file2)
+            if "albeniz3" not in st.session_state:
+                st.session_state["albeniz3"] = convert_midi_to_wav(midi_file3)
+        except Exception as e:
+            if "albeniz1" not in st.session_state:
+                st.session_state["albeniz1"] = open("./music_samples/mp3_versions/alb_esp1.mp3", 'rb').read()
+            if "albeniz2" not in st.session_state:
+                st.session_state["albeniz2"] = open("./music_samples/mp3_versions/alb_esp4.mp3", 'rb').read()
+            if "albeniz3" not in st.session_state:
+                st.session_state["albeniz3"] = open("./music_samples/mp3_versions//alb_se8.mp3", 'rb').read()
+
+        st.markdown("<b> Option 1:</b> <br>Classical Music by  **albeniz**:", unsafe_allow_html=True)
+        st.caption("albeniz 1")
+        st.audio(st.session_state["albeniz1"], format='audio/mp3')
+        st.caption("albeniz 2")
+        st.audio(st.session_state["albeniz2"], format='audio/mp3')
+        st.caption("albeniz 3")
+        st.audio(st.session_state["albeniz3"], format='audio/mp3')
     
     st.markdown('---')
 
