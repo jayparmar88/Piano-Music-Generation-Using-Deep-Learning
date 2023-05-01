@@ -67,9 +67,9 @@ def music():
         st.audio(st.session_state["hybrid3"], format='audio/mp3')
         
      with col3:
-        midi_file1 = open("./music_samples/haydn/alb_esp1.mid", 'rb')
-        midi_file2 = open("./music_samples/haydn/alb_esp4.mid", 'rb')
-        midi_file3 = open("./music_samples/haydn/alb_se8.mid", 'rb')
+        midi_file1 = open("./music_samples/haydn/EyesOnMePiano.mid", 'rb')
+        midi_file2 = open("./music_samples/haydn/Gold_Silver_Rival_Battle.mid", 'rb')
+        midi_file3 = open("./music_samples/haydn/fortresscondor.mid", 'rb')
         try:
             if "haydn1" not in st.session_state:
                 st.session_state["haydn1"] = convert_midi_to_wav(midi_file1)
@@ -79,13 +79,13 @@ def music():
                 st.session_state["haydn3"] = convert_midi_to_wav(midi_file3)
         except Exception as e:
             if "haydn1" not in st.session_state:
-                st.session_state["haydn1"] = open("./music_samples/mp3_versions/alb_esp1.mp3", 'rb').read()
+                st.session_state["haydn1"] = open("./music_samples/mp3_versions/EyesOnMePiano.mp3", 'rb').read()
             if "haydn2" not in st.session_state:
-                st.session_state["haydn2"] = open("./music_samples/mp3_versions/alb_esp4.mp3", 'rb').read()
+                st.session_state["haydn2"] = open("./music_samples/mp3_versions/Gold_Silver_Rival_Battle.mp3", 'rb').read()
             if "haydn3" not in st.session_state:
-                st.session_state["haydn3"] = open("./music_samples/mp3_versions//alb_se8.mp3", 'rb').read()
+                st.session_state["haydn3"] = open("./music_samples/mp3_versions/fortresscondor.mp3", 'rb').read()
 
-        st.markdown("<b> Option 1:</b> <br>Classical Music by  **albeniz**:", unsafe_allow_html=True)
+        st.markdown("<b> Option 1:</b> <br>Classical Music by  **haydn**:", unsafe_allow_html=True)
         st.caption("haydn 1")
         st.audio(st.session_state["haydn1"], format='audio/mp3')
         st.caption("haydn 2")
@@ -124,7 +124,7 @@ def music():
 
     with st.form("Batch Selection"):
         st.subheader("Choose a style of music to generate synthetic version:")
-        batch = st.radio('Style', options=("Chopin Music", "Hybrid Music", "Albeniz Music", "Borodin Music"))
+        batch = st.radio('Style', options=("Chopin Music", "Hybrid Music", "Haydn Music", "Borodin Music"))
         confirm = st.form_submit_button("Generate Music")
 
     if confirm:
@@ -169,6 +169,25 @@ def music():
                             output = open("./music_samples/mp3_versions/test_output_better.mp3", 'rb').read()
                         st.session_state["concert"] = True
                         
+            if batch == "Haydn Music":
+            with st.spinner("Generating Haydn Music"):
+                with st.empty():
+                    
+                    if st.session_state["classical"]:
+                        c = "haydn"
+                        try:
+                            output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_haydn.mid", 'rb'))
+                        except Exception as e:
+                            output = open("./music_samples/mp3_versions/test_output_haydn.mp3", 'rb').read()
+                        st.session_state["classical"] = False
+                    else:
+                        c = "better"
+                        try:
+                            output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_better.mid", 'rb'))
+                        except Exception as e:
+                            output = open("./music_samples/mp3_versions/test_output_better.mp3", 'rb').read()
+                        st.session_state["classical"] = True
+                        
             if batch == "Borodin Music":
             with st.spinner("Generating Borodin Music"):
                 with st.empty():
@@ -176,7 +195,7 @@ def music():
                     if st.session_state["classical"]:
                         c = "borodin"
                         try:
-                            output = convert_midi_to_wav(open("./music_samples/mp3_versionstest_output_borodin.mid", 'rb'))
+                            output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_borodin.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_borodin.mp3", 'rb').read()
                         st.session_state["classical"] = False
@@ -187,12 +206,17 @@ def music():
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_better.mp3", 'rb').read()
                         st.session_state["classical"] = True
+                        
             # st.caption(c)
             st.subheader("🎉 Sample music generated : (Chopin Music)")
             st.audio(output, format="mp3")
                     
             # st.caption(c)
             st.subheader("🎉 Sample music generated : (Hybrid Music)")
+            st.audio(output, format="wav")
+            
+            # st.caption(c)
+            st.subheader("🎉 Sample music generated : (Haydn Music)")
             st.audio(output, format="wav")
             
             # st.caption(c)
