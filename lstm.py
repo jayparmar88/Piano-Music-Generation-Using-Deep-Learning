@@ -110,7 +110,7 @@ def create_network(network_input, n_vocab):
 
 def train(model, network_input, network_output):
     """ train the neural network """
-    filepath = "weights-improvement-{epoch:02d}-{loss:.4f}-bigger.hdf5"
+    filepath = "weights.hdf5"
     checkpoint = ModelCheckpoint(
         filepath,
         monitor='loss',
