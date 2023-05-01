@@ -67,64 +67,64 @@ def music():
         st.audio(st.session_state["hybrid3"], format='audio/mp3')
         
      with col3:
-        midi_file1 = open("./music_samples/albeniz/alb_esp1.mid", 'rb')
-        midi_file2 = open("./music_samples/albeniz/alb_esp4.mid", 'rb')
-        midi_file3 = open("./music_samples/albeniz/alb_se8.mid", 'rb')
+        midi_file1 = open("./music_samples/haydn/alb_esp1.mid", 'rb')
+        midi_file2 = open("./music_samples/haydn/alb_esp4.mid", 'rb')
+        midi_file3 = open("./music_samples/haydn/alb_se8.mid", 'rb')
         try:
-            if "albeniz1" not in st.session_state:
-                st.session_state["albeniz1"] = convert_midi_to_wav(midi_file1)
-            if "albeniz2" not in st.session_state:
-                st.session_state["albeniz2"] = convert_midi_to_wav(midi_file2)
-            if "albeniz3" not in st.session_state:
-                st.session_state["albeniz3"] = convert_midi_to_wav(midi_file3)
+            if "haydn1" not in st.session_state:
+                st.session_state["haydn1"] = convert_midi_to_wav(midi_file1)
+            if "haydn2" not in st.session_state:
+                st.session_state["haydn2"] = convert_midi_to_wav(midi_file2)
+            if "haydn3" not in st.session_state:
+                st.session_state["haydn3"] = convert_midi_to_wav(midi_file3)
         except Exception as e:
-            if "albeniz1" not in st.session_state:
-                st.session_state["albeniz1"] = open("./music_samples/mp3_versions/alb_esp1.mp3", 'rb').read()
-            if "albeniz2" not in st.session_state:
-                st.session_state["albeniz2"] = open("./music_samples/mp3_versions/alb_esp4.mp3", 'rb').read()
-            if "albeniz3" not in st.session_state:
-                st.session_state["albeniz3"] = open("./music_samples/mp3_versions//alb_se8.mp3", 'rb').read()
+            if "haydn1" not in st.session_state:
+                st.session_state["haydn1"] = open("./music_samples/mp3_versions/alb_esp1.mp3", 'rb').read()
+            if "haydn2" not in st.session_state:
+                st.session_state["haydn2"] = open("./music_samples/mp3_versions/alb_esp4.mp3", 'rb').read()
+            if "haydn3" not in st.session_state:
+                st.session_state["haydn3"] = open("./music_samples/mp3_versions//alb_se8.mp3", 'rb').read()
 
         st.markdown("<b> Option 1:</b> <br>Classical Music by  **albeniz**:", unsafe_allow_html=True)
-        st.caption("albeniz 1")
-        st.audio(st.session_state["albeniz1"], format='audio/mp3')
-        st.caption("albeniz 2")
-        st.audio(st.session_state["albeniz2"], format='audio/mp3')
-        st.caption("albeniz 3")
-        st.audio(st.session_state["albeniz3"], format='audio/mp3')
+        st.caption("haydn 1")
+        st.audio(st.session_state["haydn1"], format='audio/mp3')
+        st.caption("haydn 2")
+        st.audio(st.session_state["haydn2"], format='audio/mp3')
+        st.caption("haydn 3")
+        st.audio(st.session_state["haydn3"], format='audio/mp3')
         
      with col4:
-        midi_file1 = open("./music_samples/albeniz/alb_esp1.mid", 'rb')
-        midi_file2 = open("./music_samples/albeniz/alb_esp4.mid", 'rb')
-        midi_file3 = open("./music_samples/albeniz/alb_se8.mid", 'rb')
+        midi_file1 = open("./music_samples/borodin/bor_ps1.mid", 'rb')
+        midi_file2 = open("./music_samples/borodin/bor_ps4.mid", 'rb')
+        midi_file3 = open("./music_samples/borodin/bor_ps7.mid", 'rb')
         try:
-            if "albeniz1" not in st.session_state:
-                st.session_state["albeniz1"] = convert_midi_to_wav(midi_file1)
-            if "albeniz2" not in st.session_state:
-                st.session_state["albeniz2"] = convert_midi_to_wav(midi_file2)
-            if "albeniz3" not in st.session_state:
-                st.session_state["albeniz3"] = convert_midi_to_wav(midi_file3)
+            if "borodin1" not in st.session_state:
+                st.session_state["borodin1"] = convert_midi_to_wav(midi_file1)
+            if "borodin2" not in st.session_state:
+                st.session_state["borodin2"] = convert_midi_to_wav(midi_file2)
+            if "borodin3" not in st.session_state:
+                st.session_state["borodin3"] = convert_midi_to_wav(midi_file3)
         except Exception as e:
-            if "albeniz1" not in st.session_state:
-                st.session_state["albeniz1"] = open("./music_samples/mp3_versions/alb_esp1.mp3", 'rb').read()
-            if "albeniz2" not in st.session_state:
-                st.session_state["albeniz2"] = open("./music_samples/mp3_versions/alb_esp4.mp3", 'rb').read()
-            if "albeniz3" not in st.session_state:
-                st.session_state["albeniz3"] = open("./music_samples/mp3_versions//alb_se8.mp3", 'rb').read()
+            if "borodin1" not in st.session_state:
+                st.session_state["borodin1"] = open("./music_samples/mp3_versions/bor_ps1.mp3", 'rb').read()
+            if "borodin2" not in st.session_state:
+                st.session_state["borodin2"] = open("./music_samples/mp3_versions/bor_ps4.mp3", 'rb').read()
+            if "borodin3" not in st.session_state:
+                st.session_state["borodin3"] = open("./music_samples/mp3_versions//bor_ps7.mp3", 'rb').read()
 
-        st.markdown("<b> Option 1:</b> <br>Classical Music by  **albeniz**:", unsafe_allow_html=True)
-        st.caption("albeniz 1")
-        st.audio(st.session_state["albeniz1"], format='audio/mp3')
-        st.caption("albeniz 2")
-        st.audio(st.session_state["albeniz2"], format='audio/mp3')
-        st.caption("albeniz 3")
-        st.audio(st.session_state["albeniz3"], format='audio/mp3')
+        st.markdown("<b> Option 1:</b> <br>Classical Music by  **borodin**:", unsafe_allow_html=True)
+        st.caption("borodin 1")
+        st.audio(st.session_state["borodin1"], format='audio/mp3')
+        st.caption("borodin 2")
+        st.audio(st.session_state["borodin2"], format='audio/mp3')
+        st.caption("borodin 3")
+        st.audio(st.session_state["borodin3"], format='audio/mp3')
     
     st.markdown('---')
 
     with st.form("Batch Selection"):
         st.subheader("Choose a style of music to generate synthetic version:")
-        batch = st.radio('Style', options=("Chopin Music", "Hybrid Music"))
+        batch = st.radio('Style', options=("Chopin Music", "Hybrid Music", "Albeniz Music", "Borodin Music"))
         confirm = st.form_submit_button("Generate Music")
 
     if confirm:
@@ -168,9 +168,35 @@ def music():
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_better.mp3", 'rb').read()
                         st.session_state["concert"] = True
+                        
+            if batch == "Borodin Music":
+            with st.spinner("Generating Borodin Music"):
+                with st.empty():
+                    
+                    if st.session_state["classical"]:
+                        c = "borodin"
+                        try:
+                            output = convert_midi_to_wav(open("./music_samples/mp3_versionstest_output_borodin.mid", 'rb'))
+                        except Exception as e:
+                            output = open("./music_samples/mp3_versions/test_output_borodin.mp3", 'rb').read()
+                        st.session_state["classical"] = False
+                    else:
+                        c = "better"
+                        try:
+                            output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_better.mid", 'rb'))
+                        except Exception as e:
+                            output = open("./music_samples/mp3_versions/test_output_better.mp3", 'rb').read()
+                        st.session_state["classical"] = True
+            # st.caption(c)
+            st.subheader("🎉 Sample music generated : (Chopin Music)")
+            st.audio(output, format="mp3")
                     
             # st.caption(c)
-            st.subheader("🎉 Sample music generated : (Hybrid)")
+            st.subheader("🎉 Sample music generated : (Hybrid Music)")
+            st.audio(output, format="wav")
+            
+            # st.caption(c)
+            st.subheader("🎉 Sample music generated : (Borodin Music)")
             st.audio(output, format="wav")
             
     st.subheader("Pokemon music tune generated by this model")
