@@ -39,7 +39,7 @@ def abstract():
     distribution of notes and chords. By adjusting the temperature parameter of the sampling process, the model can be made more or \
     less creative, producing variations on the learned patterns or generating entirely new musical ideas.")
 
-    st.subheader("LSTM Model")
+    st.subheader("Our Model")
     st.write("In our model we use four different types of layers:")
    
     st.markdown("<ol>\
