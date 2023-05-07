@@ -127,13 +127,11 @@ def music():
         if batch == "Chopin Music":
             with st.spinner("Generating Chopin Music"):
                 with st.empty():
-                import time
                 
                         try:
                             output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_chopin.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_chopin.mp3", 'rb').read()
-                time.sleep(2)
                 st.snow()  
             
             # st.caption(c)
@@ -160,13 +158,11 @@ def music():
         if batch == "Haydn Music":
             with st.spinner("Generating Haydn Music"):
                 with st.empty():
-                import time
                 
                         try:
                             output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_haydn.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_haydn.mp3", 'rb').read()
-                time.sleep(2)
                 st.snow() 
                 
             # st.caption(c)
@@ -176,13 +172,11 @@ def music():
         if batch == "Borodin Music":
             with st.spinner("Generating Borodin Music"):
                 with st.empty():
-                import time
                 
                         try:
                             output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_borodin.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_borodin.mp3", 'rb').read()
-                time.sleep(2)
                 st.snow() 
                 
             # st.caption(c)
