@@ -2,7 +2,6 @@ import streamlit as st
 
 from home import abstract
 from music_generation import music
-from model import generate
 
 def main():
     
@@ -10,8 +9,6 @@ def main():
     page = side_bar()
     if page == "Home":
         abstract()
-    elif page == "Model":
-        generate()
     else:
         music()
 
@@ -20,7 +17,7 @@ def side_bar():
 
         st.title("Music Generation Project")
 
-        page = st.radio("GoTo", ("Home", "Model", "Music_Generate"))
+        page = st.radio("GoTo", ("Home", "Music_Generate"))
     
     return page
 
