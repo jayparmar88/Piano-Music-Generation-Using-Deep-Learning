@@ -92,7 +92,7 @@ def music():
     with col4:
         midi_file1 = open("./music_samples/borodin/bor_ps1.mid", 'rb')
         midi_file2 = open("./music_samples/borodin/bor_ps4.mid", 'rb')
-        midi_file3 = open("./music_samples/borodin/bor_ps7.mid", 'rb')
+        midi_file3 = open("./music_samples/borodin/bor_ps6.mid", 'rb')
         try:
             if "borodin1" not in st.session_state:
                 st.session_state["borodin1"] = convert_midi_to_wav(midi_file1)
@@ -106,7 +106,7 @@ def music():
             if "borodin2" not in st.session_state:
                 st.session_state["borodin2"] = open("./music_samples/mp3_versions/bor_ps4.mp3", 'rb').read()
             if "borodin3" not in st.session_state:
-                st.session_state["borodin3"] = open("./music_samples/mp3_versions//bor_ps7.mp3", 'rb').read()
+                st.session_state["borodin3"] = open("./music_samples/mp3_versions//bor_ps6.mp3", 'rb').read()
 
         st.markdown("<b> Option 4:</b> <br>Classical Music by **borodin**:", unsafe_allow_html=True)
         st.caption("borodin 1")
