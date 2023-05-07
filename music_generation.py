@@ -81,7 +81,7 @@ def music():
             if "haydn1" not in st.session_state:
                 st.session_state["haydn1"] = open("./music_samples/mp3_versions/hay_40_1.mp3", 'rb').read()
             if "haydn2" not in st.session_state:
-                st.session_state["haydn2"] = open("./music_samples/mp3_versions/haydn_35_3", 'rb').read()
+                st.session_state["haydn2"] = open("./music_samples/mp3_versions/haydn_35_3.mp3", 'rb').read()
             if "haydn3" not in st.session_state:
                 st.session_state["haydn3"] = open("./music_samples/mp3_versions/haydn_8_2.mp3", 'rb').read()
 
