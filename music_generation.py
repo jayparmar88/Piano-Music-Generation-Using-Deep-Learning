@@ -67,9 +67,9 @@ def music():
         st.audio(st.session_state["hybrid3"], format='audio/mp3')
         
     with col3:
-        midi_file1 = open("./music_samples/haydn/EyesOnMePiano.mid", 'rb')
-        midi_file2 = open("./music_samples/haydn/Gold_Silver_Rival_Battle.mid", 'rb')
-        midi_file3 = open("./music_samples/haydn/fortresscondor.mid", 'rb')
+        midi_file1 = open("./music_samples/haydn/hay_40_1.mid", 'rb')
+        midi_file2 = open("./music_samples/haydn/haydn_35_3.mid", 'rb')
+        midi_file3 = open("./music_samples/haydn/haydn_8_2.mid", 'rb')
         try:
             if "haydn1" not in st.session_state:
                 st.session_state["haydn1"] = convert_midi_to_wav(midi_file1)
