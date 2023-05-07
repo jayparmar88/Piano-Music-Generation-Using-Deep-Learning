@@ -66,7 +66,7 @@ def music():
         st.caption("hybrid 3")
         st.audio(st.session_state["hybrid3"], format='audio/mp3')
         
-     with col3:
+    with col3:
         midi_file1 = open("./music_samples/haydn/EyesOnMePiano.mid", 'rb')
         midi_file2 = open("./music_samples/haydn/Gold_Silver_Rival_Battle.mid", 'rb')
         midi_file3 = open("./music_samples/haydn/fortresscondor.mid", 'rb')
@@ -93,7 +93,7 @@ def music():
         st.caption("haydn 3")
         st.audio(st.session_state["haydn3"], format='audio/mp3')
         
-     with col4:
+    with col4:
         midi_file1 = open("./music_samples/borodin/bor_ps1.mid", 'rb')
         midi_file2 = open("./music_samples/borodin/bor_ps4.mid", 'rb')
         midi_file3 = open("./music_samples/borodin/bor_ps7.mid", 'rb')
@@ -169,7 +169,7 @@ def music():
                             output = open("./music_samples/mp3_versions/test_output_better.mp3", 'rb').read()
                         st.session_state["concert"] = True
                         
-            if batch == "Haydn Music":
+        if batch == "Haydn Music":
             with st.spinner("Generating Haydn Music"):
                 with st.empty():
                     
@@ -188,7 +188,7 @@ def music():
                             output = open("./music_samples/mp3_versions/test_output_better.mp3", 'rb').read()
                         st.session_state["classical"] = True
                         
-            if batch == "Borodin Music":
+        if batch == "Borodin Music":
             with st.spinner("Generating Borodin Music"):
                 with st.empty():
                     
