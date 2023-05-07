@@ -11,7 +11,7 @@ def abstract():
     tasks such as even that of music generation. In this project, simple piano tunes are used for training \
     and generating new music using deep learning.")
     
-    st.subheader("Input music data")
+    st.subheader("Music data")
     st.write("For generating music, first we have to train model using input music data. for \
     the input data we are passing midi files. The data splits into two  object types: notes and chords. \
     Note objects contain information about the pitch, octave, and offset of the Note. \
@@ -22,7 +22,24 @@ def abstract():
     st.markdown('---')
     
     st.header("Model")
+    
+    st.subheader("Why lstm model is used in this project")
+    st.write("LSTM (Long Short-Term Memory) is a type of recurrent neural network (RNN) that is particularly effective \
+    at processing sequential data such as audio, speech, and music. Music is a form of sequential data because it has a \
+    temporal structure: notes are played one after the other, and there is often a rhythmic pattern.")
 
+    st.write("LSTM models are particularly useful for music generation because they can learn to capture long-term dependencies \
+    between notes and chords, which is important for creating music that sounds coherent and musically pleasing. \
+    Traditional feedforward neural networks struggle with processing sequential data because they don't have any memory of past inputs. \
+    LSTMs, on the other hand, have a built-in memory mechanism that allows them to keep track of past inputs and use that information \
+    to inform future predictions.")
+
+    st.write("In music generation using deep learning, the LSTM model is typically trained on a large dataset of existing music to learn the \
+    patterns and structure of music. Once the model is trained, it can be used to generate new music by sampling from the learned \
+    distribution of notes and chords. By adjusting the temperature parameter of the sampling process, the model can be made more or \
+    less creative, producing variations on the learned patterns or generating entirely new musical ideas.")
+
+    st.subheader("LSTM Model")
     st.write("In our model we use four different types of layers:")
    
     st.markdown("<ol>\
