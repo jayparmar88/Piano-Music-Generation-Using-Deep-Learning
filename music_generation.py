@@ -79,11 +79,11 @@ def music():
                 st.session_state["haydn3"] = convert_midi_to_wav(midi_file3)
         except Exception as e:
             if "haydn1" not in st.session_state:
-                st.session_state["haydn1"] = open("./music_samples/mp3_versions/EyesOnMePiano.mp3", 'rb').read()
+                st.session_state["haydn1"] = open("./music_samples/mp3_versions/hay_40_1.mp3", 'rb').read()
             if "haydn2" not in st.session_state:
-                st.session_state["haydn2"] = open("./music_samples/mp3_versions/Gold_Silver_Rival_Battle.mp3", 'rb').read()
+                st.session_state["haydn2"] = open("./music_samples/mp3_versions/haydn_35_3", 'rb').read()
             if "haydn3" not in st.session_state:
-                st.session_state["haydn3"] = open("./music_samples/mp3_versions/fortresscondor.mp3", 'rb').read()
+                st.session_state["haydn3"] = open("./music_samples/mp3_versions/haydn_8_2.mp3", 'rb').read()
 
         st.markdown("<b> Option 1:</b> <br>Classical Music by  **haydn**:", unsafe_allow_html=True)
         st.caption("haydn 1")
