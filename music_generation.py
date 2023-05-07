@@ -127,12 +127,15 @@ def music():
         if batch == "Chopin Music":
             with st.spinner("Generating Chopin Music"):
                 with st.empty():
-
+                import time
+                
                         try:
                             output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_chopin.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_chopin.mp3", 'rb').read()
-                            
+                time.sleep(2)
+                st.snow()  
+            
             # st.caption(c)
             st.subheader("🎉 Sample music generated : (Chopin Music)")
             st.audio(output, format="mp3")
@@ -140,11 +143,14 @@ def music():
         if batch == "Hybrid Music":
             with st.spinner("Generating Hybrid Music"):
                 with st.empty():
+                import time
 
                         try:
                             output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_hybrid.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_hybrid.mp3", 'rb').read()
+                time.sleep(2)
+                st.snow() 
                             
             # st.caption(c)
             st.subheader("🎉 Sample music generated : (Hybrid Music)")
@@ -153,12 +159,15 @@ def music():
         if batch == "Haydn Music":
             with st.spinner("Generating Haydn Music"):
                 with st.empty():
-                    
+                import time
+                
                         try:
                             output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_haydn.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_haydn.mp3", 'rb').read()
-                            
+                time.sleep(2)
+                st.snow() 
+                
             # st.caption(c)
             st.subheader("🎉 Sample music generated : (Haydn Music)")
             st.audio(output, format="wav")
@@ -166,12 +175,15 @@ def music():
         if batch == "Borodin Music":
             with st.spinner("Generating Borodin Music"):
                 with st.empty():
-                    
+                import time
+                
                         try:
                             output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_borodin.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_borodin.mp3", 'rb').read()
-
+                time.sleep(2)
+                st.snow() 
+                
             # st.caption(c)
             st.subheader("🎉 Sample music generated : (Borodin Music)")
             st.audio(output, format="wav")
