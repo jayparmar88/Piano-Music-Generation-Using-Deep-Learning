@@ -143,12 +143,13 @@ def music():
         if batch == "Hybrid Music":
             with st.spinner("Generating Hybrid Music"):
                 with st.empty():
-                import time
+
 
                         try:
                             output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_hybrid.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_hybrid.mp3", 'rb').read()
+                import time
                 time.sleep(2)
                 st.snow() 
                             
