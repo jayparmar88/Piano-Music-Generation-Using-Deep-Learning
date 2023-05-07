@@ -5,6 +5,7 @@ def music():
     st.header("🎵 Audio samples to train model")
 
     col1, col2 = st.columns(2)
+    col3, col4 = st.columns(2)
 
     if "classical" not in st.session_state:
         st.session_state["classical"] = True
@@ -65,10 +66,8 @@ def music():
         st.audio(st.session_state["hybrid2"], format='audio/mp3')
         st.caption("hybrid 3")
         st.audio(st.session_state["hybrid3"], format='audio/mp3')
-    
-    col1, col2 = st.columns(2)
         
-    with col1:
+    with col3:
         midi_file1 = open("./music_samples/haydn/hay_40_1.mid", 'rb')
         midi_file2 = open("./music_samples/haydn/haydn_35_3.mid", 'rb')
         midi_file3 = open("./music_samples/haydn/haydn_8_2.mid", 'rb')
@@ -95,7 +94,7 @@ def music():
         st.caption("haydn 3")
         st.audio(st.session_state["haydn3"], format='audio/mp3')
         
-    with col2:
+    with col4:
         midi_file1 = open("./music_samples/borodin/bor_ps1.mid", 'rb')
         midi_file2 = open("./music_samples/borodin/bor_ps4.mid", 'rb')
         midi_file3 = open("./music_samples/borodin/bor_ps7.mid", 'rb')
