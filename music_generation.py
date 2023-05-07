@@ -5,6 +5,7 @@ def music():
     st.header("🎵 Audio samples to train model")
 
     col1, col2 = st.columns(2)
+    st.markdown('---')
     col3, col4 = st.columns(2)
 
     with col1:
@@ -81,7 +82,7 @@ def music():
             if "haydn3" not in st.session_state:
                 st.session_state["haydn3"] = open("./music_samples/mp3_versions/haydn_8_2.mp3", 'rb').read()
 
-        st.markdown("<b> Option 3:</b> <br>Classical Music by **haydn**:", unsafe_allow_html=True)
+        st.markdown("<b> Option 3:</b> <br>Classical Music by **Haydn**:", unsafe_allow_html=True)
         st.caption("haydn 1")
         st.audio(st.session_state["haydn1"], format='audio/mp3')
         st.caption("haydn 2")
@@ -108,7 +109,7 @@ def music():
             if "borodin3" not in st.session_state:
                 st.session_state["borodin3"] = open("./music_samples/mp3_versions//bor_ps6.mp3", 'rb').read()
 
-        st.markdown("<b> Option 4:</b> <br>Classical Music by **borodin**:", unsafe_allow_html=True)
+        st.markdown("<b> Option 4:</b> <br>Classical Music by **Borodin**:", unsafe_allow_html=True)
         st.caption("borodin 1")
         st.audio(st.session_state["borodin1"], format='audio/mp3')
         st.caption("borodin 2")
@@ -142,13 +143,11 @@ def music():
             with st.spinner("Generating Hybrid Music"):
                 with st.empty():
 
-
                         try:
                             output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_hybrid.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_hybrid.mp3", 'rb').read()
-                import time
-                time.sleep(2)
+                            
                 st.snow() 
                             
             # st.caption(c)
