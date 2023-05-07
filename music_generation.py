@@ -67,11 +67,6 @@ def music():
         st.audio(st.session_state["hybrid3"], format='audio/mp3')
     
     col1, col2 = st.columns(2)
-
-    if "classical" not in st.session_state:
-        st.session_state["classical"] = True
-    if "concert" not in st.session_state:
-        st.session_state["concert"] = True
         
     with col1:
         midi_file1 = open("./music_samples/haydn/hay_40_1.mid", 'rb')
