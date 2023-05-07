@@ -7,11 +7,6 @@ def music():
     col1, col2 = st.columns(2)
     col3, col4 = st.columns(2)
 
-    if "classical" not in st.session_state:
-        st.session_state["classical"] = True
-    if "concert" not in st.session_state:
-        st.session_state["concert"] = True
-
     with col1:
         midi_file1 = open("./music_samples/chopin/chpn-p11.mid", 'rb')
         midi_file2 = open("./music_samples/chopin/chpn_op23.mid", 'rb')
