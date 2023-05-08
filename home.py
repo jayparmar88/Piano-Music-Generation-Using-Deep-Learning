@@ -50,9 +50,7 @@ def abstract():
                 </ol>", unsafe_allow_html = True)
 
     st.write("For each LSTM, Dense, and Activation layer the first parameter is how many nodes the layer should have. For the Dropout \
-    layer the first parameter is the fraction of input units that should be dropped during training. For each LSTM, Dense, and \
-    Activation layer the first parameter is how many nodes the layer should have. For the Dropout layer the first parameter is the \
-    fraction of input units that should be dropped during training.")
+    layer the first parameter is the fraction of input units that should be dropped during training.")
     
     st.subheader("🌉 Model Architecture")
     st.image("./img/Model_Architecture.png")
