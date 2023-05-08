@@ -132,7 +132,6 @@ def music():
                             output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_chopin.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_chopin.mp3", 'rb').read()
-                st.snow()  
             
             # st.caption(c)
             st.subheader("🎉 Sample music generated : (Chopin Music)")
@@ -146,8 +145,7 @@ def music():
                             output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_borodin.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_borodin.mp3", 'rb').read()
-                st.balloon()
-                
+
             # st.caption(c)
             st.subheader("🎉 Sample music generated : (Borodin Music)")
             st.audio(output, format="wav")
@@ -160,8 +158,7 @@ def music():
                             output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_haydn.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_haydn.mp3", 'rb').read()
-                st.snow() 
-                
+
             # st.caption(c)
             st.subheader("🎉 Sample music generated : (Haydn Music)")
             st.audio(output, format="wav")
@@ -174,8 +171,6 @@ def music():
                             output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_hybrid.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_hybrid.mp3", 'rb').read()
-                            
-                st.snow() 
                             
             # st.caption(c)
             st.subheader("🎉 Sample music generated : (Hybrid Music)")
