@@ -54,7 +54,7 @@ def music():
             if "borodin3" not in st.session_state:
                 st.session_state["borodin3"] = open("./music_samples/mp3_versions//bor_ps6.mp3", 'rb').read()
 
-        st.markdown("<b> Option 4:</b> <br>Classical Music by **Borodin**:", unsafe_allow_html=True)
+        st.markdown("<b> Option 2:</b> <br>Classical Music by **Borodin**:", unsafe_allow_html=True)
         st.caption("borodin 1")
         st.audio(st.session_state["borodin1"], format='audio/mp3')
         st.caption("borodin 2")
@@ -108,7 +108,7 @@ def music():
             if "hybrid3" not in st.session_state:
                 st.session_state["hybrid3"] = open("./music_samples/mp3_versions/figaro.mp3", 'rb').read()
         
-        st.markdown("<b> Option 2:</b> <br>Classical Music by **Hybrid**:", unsafe_allow_html=True)
+        st.markdown("<b> Option 4:</b> <br>Classical Music by **Hybrid**:", unsafe_allow_html=True)
         st.caption("hybrid 1")
         st.audio(st.session_state["hybrid1"], format='audio/mp3')
         st.caption("hybrid 2")
@@ -146,7 +146,7 @@ def music():
                             output = convert_midi_to_wav(open("./music_samples/mp3_versions/test_output_borodin.mid", 'rb'))
                         except Exception as e:
                             output = open("./music_samples/mp3_versions/test_output_borodin.mp3", 'rb').read()
-                st.snow() 
+                st.balloon()
                 
             # st.caption(c)
             st.subheader("🎉 Sample music generated : (Borodin Music)")
