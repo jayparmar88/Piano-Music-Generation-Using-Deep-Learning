@@ -65,7 +65,7 @@ For each LSTM, Dense, and Activation layer, the first parameter specifies the nu
 
 The model architecture used in this project is shown below.
 
-![Model Architecture](https://github.com/jayparmar88/Music-Generation/blob/main/img/Model_Architecture.png){:height="50px" width="50px"}
+![Model Architecture](https://github.com/jayparmar88/Music-Generation/blob/main/img/Model_Architecture.png | height="50px" width="50px")
 
 ## Web App :
 
