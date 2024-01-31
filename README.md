@@ -1,16 +1,5 @@
 # Piano Music Generation using Deep Learning :
 
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Music Data](#music-data)
-- [Model](model)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Model Architecture](#model-architecture)
-- [Web App](web-app)
-- [License](#license)
-
 ## Project Overview :
 
 In recent years, recurrent neural network models have defined the normative process in producing efficient and reliable results in various challenging problems such as translation, voice recognition and 
@@ -76,7 +65,7 @@ For each LSTM, Dense, and Activation layer, the first parameter specifies the nu
 
 The model architecture used in this project is shown below.
 
-![Model Architecture](https://github.com/jayparmar88/Music-Generation/blob/main/img/Model_Architecture.png){:height="100px" width="100px"}
+![Model Architecture](https://github.com/jayparmar88/Music-Generation/blob/main/img/Model_Architecture.png){:height="50px" width="50px"}
 
 ## Web App :
 
@@ -85,4 +74,4 @@ I have deployed web-app for this project using streamlit platform.
 
 ## License :
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE).
