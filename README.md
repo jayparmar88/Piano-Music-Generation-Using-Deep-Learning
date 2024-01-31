@@ -3,10 +3,12 @@
 ## Table of Contents
 
 - [Project Overview](#project-overview)
-- [Features](#features)
+- [Music Data](#music-data)
+- [Model](model)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Model Architecture](#model-architecture)
+- [Web App](web-app)
 - [License](#license)
 
 ## Project Overview :
@@ -33,12 +35,6 @@ that allows them to keep track of past inputs and use that information to inform
 In music generation using deep learning, the LSTM model is typically trained on a large dataset of existing music to learn the patterns and structure of music. Once the model is trained, it can be used 
 to generate new music by sampling from the learned distribution of notes and chords. By adjusting the temperature parameter of the sampling process, the model can be made more or less creative, 
 producing variations on the learned patterns or generating entirely new musical ideas.
-
-## Features :
-
-- **Piano Music Generation:** The primary feature is the ability to generate piano music using a pre-trained deep learning model.
-- **Customization:** Users can tweak various parameters to influence the style, tempo, and complexity of the generated music.
-- **Evaluation:** Assess the quality of generated music using metrics like melody coherence, harmony, and overall composition structure.
 
 ## Requirements :
 
@@ -80,12 +76,12 @@ For each LSTM, Dense, and Activation layer, the first parameter specifies the nu
 
 The model architecture used in this project is shown below.
 
-![Model Architecture](https://github.com/jayparmar88/Music-Generation/blob/main/img/Model_Architecture.png)
+![Model Architecture](https://github.com/jayparmar88/Music-Generation/blob/main/img/Model_Architecture.png){:height="100px" width="100px"}
 
 ## Web App :
 
 I have deployed web-app for this project using streamlit platform.
-![Project link](https://jayparmar88-music-generation-app-jqlji9.streamlit.app/)
+- [Project link](https://jayparmar88-music-generation-app-jqlji9.streamlit.app/)
 
 ## License :
 
