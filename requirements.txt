@@ -5,4 +5,4 @@ numpy
 music21
 pretty_midi
 tensorflow-cpu
--f fluidsynth-2.3.4.tar.gz
+-f fluidsynth-2.3.2.tar.gz
