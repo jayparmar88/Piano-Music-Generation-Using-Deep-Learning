@@ -7,4 +7,3 @@ music21
 pretty_midi
 tensorflow
 tensorflow-cpu
-pip==24.0
