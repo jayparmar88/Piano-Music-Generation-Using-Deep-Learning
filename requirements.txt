@@ -1,9 +1,10 @@
 python
-streamlit==1.20.0
-scipy==1.10.1
-keras==2.12.0
-numpy==1.23.5
-music21==8.1.0
-pretty_midi==0.2.10
+streamlit
+scipy
+keras
+numpy
+music21
+pretty_midi
 tensorflow
-tensorflow-cpu==2.12.0
+tensorflow-cpu
+-f fluidsynth-2.3.4.tar.gz
