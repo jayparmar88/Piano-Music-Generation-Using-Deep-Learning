@@ -70,7 +70,7 @@ The model architecture used in this project is shown below.
 ## Web App :
 
 I have deployed web-app for this project using streamlit platform.
-- [Project link](https://jayparmar88-music-generation-app-jqlji9.streamlit.app/)
+- [Project link](https://piano-music-generation.streamlit.app/)
 
 ## License :
 
