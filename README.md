@@ -6,6 +6,11 @@ In recent years, recurrent neural network models have defined the normative proc
 image captioning, thereby making huge strides in learning useful feature representations. With these latest advancements in deep learning, RNNs have garnered fame in computational creativity tasks such as 
 even that of music generation. In this project, simple piano tunes are used for training and generating new music using deep learning.
 
+## Web App :
+
+I have deployed web-app for this project using streamlit platform.
+- [Project link](https://piano-music-generation.streamlit.app/)
+
 ## Music Data :
 
 To initiate the music generation process, the model is trained on input music data, primarily in the form of MIDI files. The data is categorized into two main object types: notes and chords. 
@@ -66,11 +71,6 @@ For each LSTM, Dense, and Activation layer, the first parameter specifies the nu
 The model architecture used in this project is shown below.
 
 <img src="https://github.com/jayparmar88/Music-Generation/blob/main/img/Model_Architecture.png" alt="drawing" width="400"/>
-
-## Web App :
-
-I have deployed web-app for this project using streamlit platform.
-- [Project link](https://piano-music-generation.streamlit.app/)
 
 ## License :
 
