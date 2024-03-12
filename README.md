@@ -9,7 +9,7 @@ even that of music generation. In this project, simple piano tunes are used for 
 ## Web App :
 
 I have deployed web-app for this project using streamlit platform.
-- [Project link](https://piano-music-generation.streamlit.app/)
+- [Project web app link](https://piano-music-generation-using-deep-learning-8888.streamlit.app/)
 
 ## Music Data :
 
