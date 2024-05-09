@@ -4,7 +4,7 @@
 
 In recent years, recurrent neural network models have defined the normative process in producing efficient and reliable results in various challenging problems such as translation, voice recognition and 
 image captioning, thereby making huge strides in learning useful feature representations. With these latest advancements in deep learning, RNNs have garnered fame in computational creativity tasks such as 
-even that of music generation. In this project, simple piano tunes are used for training and generating new music using deep learning.
+even that of music generation. In this project, simple piano tunes are used for training and generating new music using deep learning. I used LSTM based model for neural network. I made a web application on Streamlit platform to display the output.
 
 ## Web App :
 
